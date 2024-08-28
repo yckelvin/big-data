@@ -27,7 +27,7 @@ locations = [
 "bedroom"
 ]
 ESP8266_IoT.initWIFI(SerialPin.P8, SerialPin.P12, BaudRate.BaudRate115200)
-ESP8266_IoT.connectWifi("KLHOME", "127214529")
+ESP8266_IoT.connectWifi("ssid", "password")
 basic.showNumber(1)
 let client_id = randint(0, 99999999)
 ESP8266_IoT.setMQTT(
@@ -45,3 +45,4 @@ basic.pause(2000)
 if (ESP8266_IoT.isMqttBrokerConnected()) {
     basic.showIcon(IconNames.Yes)
 }
+basic.clearScreen()
