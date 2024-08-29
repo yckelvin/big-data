@@ -22,7 +22,7 @@ let locations: string[] = []
 let index = 0
 let my_flat = ""
 basic.showNumber(0)
-my_flat = "16c"
+my_flat = "17C"
 index += 0
 locations = [
 "hall",
@@ -49,4 +49,8 @@ basic.pause(2000)
 if (ESP8266_IoT.isMqttBrokerConnected()) {
     basic.showIcon(IconNames.Yes)
 }
-OLED.writeStringNewLine("OK!")
+OLED.writeStringNewLine("Button A:")
+OLED.writeStringNewLine("Change location")
+OLED.newLine()
+OLED.writeStringNewLine("Button B:")
+OLED.writeStringNewLine("Publish")
