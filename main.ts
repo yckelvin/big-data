@@ -22,7 +22,7 @@ let locations: string[] = []
 let index = 0
 let my_flat = ""
 basic.showNumber(0)
-my_flat = "17C"
+my_flat = "20B"
 index += 0
 locations = [
 "hall",
@@ -31,7 +31,7 @@ locations = [
 "bedroom"
 ]
 ESP8266_IoT.initWIFI(SerialPin.P8, SerialPin.P12, BaudRate.BaudRate115200)
-ESP8266_IoT.connectWifi("ssid", "password")
+ESP8266_IoT.connectWifi("wifiname", "12345678")
 basic.showNumber(1)
 let client_id = randint(0, 99999999)
 ESP8266_IoT.setMQTT(
@@ -41,7 +41,7 @@ convertToText(client_id),
 "test",
 ""
 )
-ESP8266_IoT.connectMQTT("192.168.0.32", 1884, true)
+ESP8266_IoT.connectMQTT("10.107.122.40", 1884, true)
 basic.showNumber(2)
 OLED.init(128, 64)
 basic.showNumber(3)
