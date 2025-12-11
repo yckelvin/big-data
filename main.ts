@@ -31,7 +31,7 @@ locations = [
 "bedroom"
 ]
 ESP8266_IoT.initWIFI(SerialPin.P8, SerialPin.P12, BaudRate.BaudRate115200)
-ESP8266_IoT.connectWifi("wifiname", "12345678")
+ESP8266_IoT.connectWifi("dji", "djidjidji")
 basic.showNumber(1)
 let client_id = randint(0, 99999999)
 ESP8266_IoT.setMQTT(
@@ -41,7 +41,7 @@ convertToText(client_id),
 "test",
 ""
 )
-ESP8266_IoT.connectMQTT("0.0.0.0", 1884, true)
+ESP8266_IoT.connectMQTT("192.168.1.5", 1884, true)
 basic.showNumber(2)
 OLED.init(128, 64)
 basic.showNumber(3)
